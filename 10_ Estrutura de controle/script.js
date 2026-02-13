@@ -28,7 +28,7 @@ const nome = "Alex";
 
 const a = 10;
 
-if(nome !== a){
+if (nome !== a) {
     console.log("Esse conceito está correto!");
 }
 
