@@ -9,6 +9,6 @@
 let o = 10;
 
 do {
-    console.log(`Valor de o ${o}`);
+    console.log(`Valor de o: ${o}`);
     o--;
-} while (0 > 1);
+} while (o > 1);
