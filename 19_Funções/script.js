@@ -101,13 +101,13 @@ testandoEscopo();
 
 let m = 10;
 
-function escopoAninhado(){
+function escopoAninhado() {
     let m = 20;
 
-    if(true){
+    if (true) {
         let m = 30;
 
-        if(true){
+        if (true) {
             let m = 40;
             console.log(m);
         }
@@ -121,3 +121,30 @@ function escopoAninhado(){
 
 escopoAninhado();
 console.log(m);
+
+
+// Arrow funcion
+
+// Arrow funcion é uma outra forma que temos de criar funções;
+// É uma sintaxe resumida, que tem algumas diferenças das funções normais;
+
+
+const testeArrow = () => {
+    console.log("Esta é uma arrow funcion");
+}
+
+
+testeArrow();
+
+
+const parOuimpar = (n) =>{
+    if(n % 2 === 0){
+        console.log("Par");
+        return;
+    }
+    console.log("Impar");
+}
+
+
+parOuimpar(5);
+parOuimpár(10);
