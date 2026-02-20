@@ -16,29 +16,29 @@
 // // Geralmente uma função retorna um valor;
 
 
-// function minhaFuncao() {
-//     console.log("Testando...");
-// }
+function minhaFuncao() {
+    console.log("Testando...");
+}
 
-// minhaFuncao();
-
-
-
-// const minhaFuncaoEmVariavel = function () {
-//     console.log("Função em variável...");
-
-// }
-
-// minhaFuncaoEmVariavel();
+minhaFuncao();
 
 
-// function funcaoComParametro(txt) {
-//     console.log(`imprimindo: ${txt}`);
-// }
 
-// funcaoComParametro("Imprimindo alguma coisa...");
+const minhaFuncaoEmVariavel = function () {
+    console.log("Função em variável...");
 
-// funcaoComParametro("Outra coisa...");
+}
+
+minhaFuncaoEmVariavel();
+
+
+function funcaoComParametro(txt) {
+    console.log(`imprimindo: ${txt}`);
+}
+
+funcaoComParametro("Imprimindo alguma coisa...");
+
+funcaoComParametro("Outra coisa...");
 
 
 
@@ -48,15 +48,15 @@
 // // se não retornamos nada a função tem utilidade, mas não externiza o que acontece nela;
 
 
-// const a = 10;
-// const b = 20;
-// const c = 30;
-// const d = 40;
+const a = 10;
+const b = 20;
+const c = 30;
+const d = 40;
 
-// function soma(n1, n2) {
-//     return n1 + n2;
+function soma(n1, n2) {
+    return n1 + n2;
 
-// }
+}
 
 
 function soma(valor1, valor2) {
@@ -79,95 +79,116 @@ alert(`Valor em real: R$ ${valorReal}`);
 alert(`Valor convertido: $${total.toFixed(2)}`);
 
 
-// const resultado = soma(a, b);
-// console.log(resultado);
+const resultado = soma(a, b);
+console.log(resultado);
 
-// console.log(soma(c, d));
-
-
-// // Escopo de funções
-
-// // As funções tem um escopo separado do escopo do programa, que é o global;
-// // Este escopo faz com que variáveis de fora não funcionem dentro;
-// // Podemos então declarar novas variáveis, sem interferir nas já declarada;
+console.log(soma(c, d));
 
 
+// Escopo de funções
 
-// let y = 10;
-
-// // Dentro da função;
-
-// function testandoEscopo() {
-//     let y = 20;
-//     console.log(`y dentro da função é: ${y}`);
-// }
-
-
-// testandoEscopo();
-
-
-// // Fora da função;
-
-// console.log(`y fora da função é: ${y}`);
-
-// testandoEscopo();
+// As funções tem um escopo separado do escopo do programa, que é o global;
+// Este escopo faz com que variáveis de fora não funcionem dentro;
+// Podemos então declarar novas variáveis, sem interferir nas já declarada;
 
 
 
-// // Escopo aninhado (Nested Scopes)
-// // As formas de criar variáveis, let e const, nos dão a possibolidade do escopo aninhado;
-// // Que consiste em ter em qualquer bloco a declaração de variáveis separadas dos outros escopos;
-// // Um bloco é caracterizado por um código entre{};
+let y = 10;
+
+// Dentro da função;
+
+function testandoEscopo() {
+    let y = 20;
+    console.log(`y dentro da função é: ${y}`);
+}
 
 
-// let m = 10;
-
-// function escopoAninhado() {
-//     let m = 20;
-
-//     if (true) {
-//         let m = 30;
-
-//         if (true) {
-//             let m = 40;
-//             console.log(m);
-//         }
-
-//         console.log(m);
-
-//     }
-
-//     console.log(m);
-// }
-
-// escopoAninhado();
-// console.log(m);
+testandoEscopo();
 
 
-// // Arrow funcion
+// Fora da função;
 
-// // Arrow funcion é uma outra forma que temos de criar funções;
-// // É uma sintaxe resumida, que tem algumas diferenças das funções normais;
+console.log(`y fora da função é: ${y}`);
 
-
-// const testeArrow = () => {
-//     console.log("Esta é uma arrow funcion");
-// }
+testandoEscopo();
 
 
-// testeArrow();
+
+// Escopo aninhado (Nested Scopes)
+// As formas de criar variáveis, let e const, nos dão a possibolidade do escopo aninhado;
+// Que consiste em ter em qualquer bloco a declaração de variáveis separadas dos outros escopos;
+// Um bloco é caracterizado por um código entre{};
 
 
-// const parOuimpar = (n) =>{
-//     if(n % 2 === 0){
-//         console.log("Par");
-//         return;
-//     }
-//     console.log("Impar");
-// }
+let m = 10;
+
+function escopoAninhado() {
+    let m = 20;
+
+    if (true) {
+        let m = 30;
+
+        if (true) {
+            let m = 40;
+            console.log(m);
+        }
+
+        console.log(m);
+
+    }
+
+    console.log(m);
+}
+
+escopoAninhado();
+console.log(m);
 
 
-// parOuimpar(5);
-// parOuimpár(10);
+// Arrow funcion
+
+// Arrow funcion é uma outra forma que temos de criar funções;
+// É uma sintaxe resumida, que tem algumas diferenças das funções normais;
+
+const testeArrow = () =>{
+    console.log("Esta é uma Arrow function!");
+}
+
+testeArrow();
+const parOuimpar = (n) => {
+    if (n % 2 === 0) {
+        console.log("Par!");
+        return;
+    }
+    console.log("Impar!");
+
+}
+
+parOuimpar(5);
+
+parOuimpar(10);
+
+
+
+// Mais sobre Arrow Function
+
+// A Arrow function pode ter uma sintaxe mais resumida;
+// Onde omitimos as {} e também a instrução de return;
+
+
+const raizQuadrada = (x) =>{
+    return x * x;
+};
+
+console.log(raizQuadrada(4));
+
+const raizQuadrada2 = (x) => x * x;
+
+console.log(raizQuadrada2(5));
+
+console.log(raizQuadrada2(12));
+
+
+
+
 
 
