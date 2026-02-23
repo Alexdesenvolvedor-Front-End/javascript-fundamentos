@@ -149,7 +149,7 @@ console.log(m);
 // Arrow funcion é uma outra forma que temos de criar funções;
 // É uma sintaxe resumida, que tem algumas diferenças das funções normais;
 
-const testeArrow = () =>{
+const testeArrow = () => {
     console.log("Esta é uma Arrow function!");
 }
 
@@ -175,11 +175,14 @@ parOuimpar(10);
 // Onde omitimos as {} e também a instrução de return;
 
 
-const raizQuadrada = (x) =>{
+const raizQuadrada = (x) => {
     return x * x;
 };
 
 console.log(raizQuadrada(4));
+
+
+// Método mas simples
 
 const raizQuadrada2 = (x) => x * x;
 
@@ -189,6 +192,23 @@ console.log(raizQuadrada2(12));
 
 
 
+//  Argumentos opcionais
+
+// Os argumentos/parâmetros nas funções são obrigatórios, precisamos passar todos;
+// Porém há casos de funções que podem funcionar sem algum dos argumentos;
+// Para resolver isso podemos fazer uma checagem do parâmetro com um if;
 
 
 
+
+const multiplication = function(m, n){
+    if (n === undefined){
+        return m * 2;
+    }else{
+       return m * n;
+    }
+}
+
+console.log(multiplication(2));
+
+console.log(multiplication(2, 4));
